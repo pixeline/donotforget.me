@@ -1,0 +1,26 @@
+{
+  "name": "Do-Not-Forget-Me",
+  "version": "1.0.0",
+  "description": "A write pad for catching that thought before it flies away... In MarkDown.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "markdown"
+  ],
+  "author": "pixeline",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.7.9"
+  },
+  "dependencies": {
+    "highlight.js": "^9.12.0",
+    "jquery": "^3.2.1",
+    "marked": "^0.3.7",
+    "normalize.css": "^7.0.0",
+    "simplemde": "^1.11.2"
+  }
+}

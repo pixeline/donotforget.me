@@ -1,0 +1,103 @@
+$chrome-icons-color: #CCC;
+
+
+$title-font: 'Barlow Semi Condensed', sans-serif;;
+
+// RULES FOR ALL
+
+html,body{
+  margin:0;
+  padding:0;
+}
+
+// Window title bar
+
+#title-bar {
+ -webkit-app-region: drag;
+ height: 24px;
+ background-color: white;
+ padding: none;
+ margin: 0px;
+}
+
+#title {
+ position: fixed;
+ top: 0px;
+ left: 56px;
+ font-family: $title-font;
+ text-transform: uppercase;
+ font-size:16px;
+ font-weight:lighter;
+ line-height:24px;
+ color: $chrome-icons-color;
+ letter-spacing: 1px;
+ padding-left:1rem;
+ text-align:center;
+}
+
+#title-bar-btns {
+ -webkit-app-region: no-drag;
+ position: fixed;
+ top: 0px;
+ right: 6px;
+ span{
+   font-size:1rem;
+   font-family: sans-serif;
+   padding:0 3px;
+   color: $chrome-icons-color;
+ }
+}
+
+// End window title bar
+
+
+body.theme-default{
+  background-color: #FFF;
+  overflow:hidden;
+  position:relative;
+}
+.editor-toolbar{
+  position:fixed;
+  z-index:10;
+  width:100%;
+  opacity:.3;
+  transition: opacity .4s linear;
+  &:hover{
+    opacity:1;
+    transition: opacity .4s linear;
+  }
+}
+.editor-statusbar{
+  position:fixed;
+  z-index:11;
+  width:100%;
+  bottom:0;
+  text-align:center;
+  opacity:.5;
+  font-family: $title-font;
+  letter-spacing:1px;
+  text-transform: lowercase;
+  transition: opacity .4s linear;
+  height:25px;
+  line-height:25px;
+  &:hover{
+    opacity:1;
+    transition: opacity .4s linear;
+  }
+}
+.CodeMirror{
+  position:fixed;
+  top:75px;
+  left:0;
+  width:99%;
+  z-index:2;
+  border-bottom-color:white;
+}
+.CodeMirror {
+  height:calc(100vh - 140px);
+}
+.CodeMirror-cursor {
+  border-left: 2px solid #20BBFC;
+  border-right: none;
+  width: 0;
+}

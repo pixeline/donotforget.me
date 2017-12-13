@@ -1,0 +1,25 @@
+// codemirror.css is prepended via gulp
+
+// Edit _custom.scss to customlize your styles
+@import 'simplemde/custom';
+// Don't edit _variables.scss, edit _custom.scss instead
+@import 'simplemde/variables';
+
+@import 'simplemde/codemirror-origin';
+// Override some codemirror styles
+@import 'simplemde/codemirror-override';
+
+@import 'simplemde/textarea';
+@import 'simplemde/preview';
+
+//
+// If your css framework doesn't contain typography styles
+// you can import the _typography.scss
+//
+// @import 'typography';
+
+@import 'simplemde/table';
+@import 'simplemde/embeded';
+
+@import 'simplemde/toolbar';
+@import 'simplemde/statusbar';
