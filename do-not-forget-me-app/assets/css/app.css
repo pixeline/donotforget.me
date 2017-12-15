@@ -581,6 +581,199 @@ span.CodeMirror-selectedtext {
 .editor-preview-active-side {
   display: block; }
 
+.editor-preview h1,
+.editor-preview h2,
+.editor-preview h3,
+.editor-preview h4,
+.editor-preview h5,
+.editor-preview h6,
+.editor-preview-side h1,
+.editor-preview-side h2,
+.editor-preview-side h3,
+.editor-preview-side h4,
+.editor-preview-side h5,
+.editor-preview-side h6 {
+  line-height: 2;
+  margin: 30px 0 0; }
+
+.editor-preview p,
+.editor-preview blockquote,
+.editor-preview table,
+.editor-preview hr,
+.editor-preview dl,
+.editor-preview ul,
+.editor-preview ol,
+.editor-preview pre,
+.editor-preview address,
+.editor-preview figure,
+.editor-preview-side p,
+.editor-preview-side blockquote,
+.editor-preview-side table,
+.editor-preview-side hr,
+.editor-preview-side dl,
+.editor-preview-side ul,
+.editor-preview-side ol,
+.editor-preview-side pre,
+.editor-preview-side address,
+.editor-preview-side figure {
+  margin: 15px 0 0; }
+
+.editor-preview h1,
+.editor-preview h2,
+.editor-preview h3,
+.editor-preview h4,
+.editor-preview h5,
+.editor-preview h6,
+.editor-preview-side h1,
+.editor-preview-side h2,
+.editor-preview-side h3,
+.editor-preview-side h4,
+.editor-preview-side h5,
+.editor-preview-side h6 {
+  font-weight: 600; }
+
+.editor-preview h1,
+.editor-preview-side h1 {
+  font-size: 32px; }
+
+.editor-preview h2,
+.editor-preview-side h2 {
+  font-size: 26px; }
+
+.editor-preview h3,
+.editor-preview-side h3 {
+  font-size: 22px; }
+
+.editor-preview h4,
+.editor-preview-side h4 {
+  font-size: 20px; }
+
+.editor-preview h5,
+.editor-preview-side h5 {
+  font-size: 18px; }
+
+.editor-preview h6,
+.editor-preview-side h6 {
+  font-size: 16px; }
+
+.editor-preview a,
+.editor-preview-side a {
+  color: #2680d9;
+  text-decoration: none;
+  -webkit-text-decoration-skip: objects; }
+  .editor-preview a:active, .editor-preview a:hover,
+  .editor-preview-side a:active,
+  .editor-preview-side a:hover {
+    text-decoration: underline; }
+
+.editor-preview b,
+.editor-preview strong,
+.editor-preview dt,
+.editor-preview-side b,
+.editor-preview-side strong,
+.editor-preview-side dt {
+  font-weight: 600; }
+
+.editor-preview code,
+.editor-preview kbd,
+.editor-preview samp,
+.editor-preview-side code,
+.editor-preview-side kbd,
+.editor-preview-side samp {
+  background-color: #f2f2f2;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 85%;
+  padding: 0.2em 0.3em; }
+
+.editor-preview pre,
+.editor-preview-side pre {
+  background-color: #f2f2f2;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.2;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px; }
+  .editor-preview pre code,
+  .editor-preview-side pre code {
+    background-color: transparent;
+    font-size: 13px;
+    padding: 0; }
+
+.editor-preview blockquote,
+.editor-preview-side blockquote {
+  border-left: 5px solid #ddd;
+  color: #777;
+  padding-left: 15px; }
+
+.editor-preview ul,
+.editor-preview ol,
+.editor-preview-side ul,
+.editor-preview-side ol {
+  padding-left: 30px; }
+
+.editor-preview dt,
+.editor-preview dd,
+.editor-preview ol ol,
+.editor-preview ul ul,
+.editor-preview ol ul,
+.editor-preview ul ol,
+.editor-preview-side dt,
+.editor-preview-side dd,
+.editor-preview-side ol ol,
+.editor-preview-side ul ul,
+.editor-preview-side ol ul,
+.editor-preview-side ul ol {
+  margin: 0; }
+
+.editor-preview hr,
+.editor-preview-side hr {
+  border: 0;
+  border-top: 1px solid #ddd; }
+
+.editor-preview small,
+.editor-preview-side small {
+  font-size: 85%; }
+
+.editor-preview sub,
+.editor-preview sup,
+.editor-preview-side sub,
+.editor-preview-side sup {
+  font-size: 85%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+.editor-preview sub,
+.editor-preview-side sub {
+  bottom: -0.2em; }
+
+.editor-preview sup,
+.editor-preview-side sup {
+  top: -0.4em; }
+
+.editor-preview address,
+.editor-preview time,
+.editor-preview-side address,
+.editor-preview-side time {
+  font-style: normal; }
+
+.editor-preview mark,
+.editor-preview-side mark {
+  background-color: yellow;
+  color: #333;
+  padding: 0 0.2em; }
+
+.editor-preview rt,
+.editor-preview-side rt {
+  font-size: 60%; }
+
+.editor-preview abbr[title],
+.editor-preview-side abbr[title] {
+  border-bottom: 0;
+  text-decoration: underline;
+  text-decoration: underline dotted; }
+
 .editor-preview table,
 .editor-preview-side table {
   background-color: white;
@@ -739,3 +932,76 @@ span.CodeMirror-selectedtext {
 
 .editor-statusbar .characters::before {
   content: 'characters: '; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+#title-bar {
+  -webkit-app-region: drag;
+  height: 24px;
+  background-color: white;
+  padding: none;
+  margin: 0px; }
+
+#title {
+  position: fixed;
+  top: 0px;
+  left: 56px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 24px;
+  color: #CCC;
+  letter-spacing: 1px;
+  padding-left: 1rem;
+  text-align: center; }
+
+body.theme-default {
+  overflow: hidden;
+  position: relative;
+  background: white; }
+
+.editor-toolbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  opacity: .3;
+  transition: opacity .4s linear; }
+  .editor-toolbar:hover {
+    opacity: 1;
+    transition: opacity .4s linear; }
+
+.editor-statusbar {
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  opacity: .5;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  transition: opacity .4s linear;
+  height: 25px;
+  line-height: 25px; }
+  .editor-statusbar:hover {
+    opacity: 1;
+    transition: opacity .4s linear; }
+
+.CodeMirror {
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 99%;
+  z-index: 2;
+  border-bottom-color: white; }
+
+.CodeMirror {
+  height: calc(100vh - 140px); }
+
+.CodeMirror-cursor {
+  border-left: 2px solid #20BBFC;
+  border-right: none;
+  width: 0; }

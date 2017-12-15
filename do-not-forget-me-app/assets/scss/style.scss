@@ -1,6 +1,7 @@
+
+@import "simplemde-theme-dnfm";
+
 $chrome-icons-color: #CCC;
-
-
 $title-font: 'Barlow Semi Condensed', sans-serif;;
 
 // RULES FOR ALL
@@ -35,26 +36,12 @@ html,body{
  text-align:center;
 }
 
-#title-bar-btns {
- -webkit-app-region: no-drag;
- position: fixed;
- top: 0px;
- right: 6px;
- span{
-   font-size:1rem;
-   font-family: sans-serif;
-   padding:0 3px;
-   color: $chrome-icons-color;
- }
-}
-
 // End window title bar
 
-
 body.theme-default{
-  background-color: #FFF;
   overflow:hidden;
   position:relative;
+  background: white;
 }
 .editor-toolbar{
   position:fixed;

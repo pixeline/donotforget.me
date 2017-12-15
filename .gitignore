@@ -1,2 +1,5 @@
 node_modules
 electron-quick-start/node_modules
+app
+
+do-not-forget-me-app/package-lock.json

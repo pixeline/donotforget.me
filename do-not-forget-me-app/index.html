@@ -6,9 +6,8 @@
   <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/simplemde.min.css">
-  <link rel="stylesheet" href="assets/css/simplemde-theme-dnfm.css">
   <link rel="stylesheet" href="./node_modules/highlight.js/styles/github.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/app.min.css">
 </head>
 <body class="theme-default">
   <header id="title-bar">
@@ -17,11 +16,12 @@
 
   <textarea id="content" ></textarea>
 
-  <script src="assets/js/highlight.js"></script>
+  <script src="./assets/js/highlight.js"></script>
   <script src="./assets/js/simplemde.min.js"></script>
   <script>
   // You can also require other files to run in this process
   require('./renderer.js')
   </script>
+  <script>require('electron-connect').client.create()</script>
 </body>
 </html>
