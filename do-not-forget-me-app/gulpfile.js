@@ -10,7 +10,9 @@ autoprefixer = require('gulp-autoprefixer'),
 rimraf = require('gulp-rimraf'),
 symdest = require('gulp-symdest'),
 sass = require('gulp-sass'),
-electron = require('electron-connect').server.create();
+electron = require('electron-connect').server.create(),
+runSequence = require('run-sequence');
+
 const shell = require('gulp-shell');
 
 var cssSources = [
@@ -44,4 +46,8 @@ gulp.task('css', function(){
   .pipe(livereload());
 })
 
-gulp.task('build', shell.task('npm run package-mac'))
+gulp.task('build', function() {
+  runSequence('build-mac','build-linux');
+});
+gulp.task('build-mac', shell.task('npm run package-mac'))
+gulp.task('build-linux', shell.task('npm run package-linux'))
