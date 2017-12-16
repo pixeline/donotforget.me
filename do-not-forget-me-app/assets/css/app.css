@@ -1008,7 +1008,7 @@ body.theme-default {
   height: calc(100vh - 140px); }
   .CodeMirror.closed {
     border-top-color: white;
-    top: 0;
+    top: 10px;
     height: calc(100vh - 65px); }
 
 .CodeMirror-cursor {

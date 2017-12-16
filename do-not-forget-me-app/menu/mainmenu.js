@@ -82,15 +82,6 @@ const template = [
         role: 'close'
       }
     ]
-  },
-  {
-    role: 'help',
-    submenu: [
-      {
-        label: 'Learn More',
-        click () { require('electron').shell.openExternal('http://electron.atom.io') }
-      }
-    ]
   }
 ]
 
@@ -101,25 +92,6 @@ if (process.platform === 'darwin') {
     submenu: [
       {
         role: 'about'
-      },
-      {
-        type: 'separator'
-      },
-      {
-        role: 'services',
-        submenu: []
-      },
-      {
-        type: 'separator'
-      },
-      {
-        role: 'hide'
-      },
-      {
-        role: 'hideothers'
-      },
-      {
-        role: 'unhide'
       },
       {
         type: 'separator'
