@@ -1,4 +1,5 @@
 const electron = require('electron')
+
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -20,8 +21,8 @@ function createWindow () {
     frame: false,
     center: true,
     title: 'Do Not Forget Me',
-    titleBarStyle: 'hidden'
-
+    titleBarStyle: 'hidden',
+    icon: path.join(__dirname, 'assets/icons/png/64x64.png')
 })
 
   // and load the index.html of the app.
@@ -52,9 +53,9 @@ app.on('ready', createWindow)
 app.on('window-all-closed', function () {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
-  if (process.platform !== 'darwin') {
+  //if (process.platform !== 'darwin') {
     app.quit()
-  }
+  //}
 })
 
 app.on('activate', function () {
@@ -67,3 +68,4 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+require('./menu/mainmenu')

@@ -52,7 +52,8 @@ $padding-code: 0.2em 0.3em !default;
 // Typography
 //
 
-$font-size: $size-base * 1.6 !default;
+//$font-size: $size-base * 1.6 !default;
+$font-size: $size-base * 1.3 !default;
 
 $font-size-h1: $size-base * 3.2 !default;
 $font-size-h2: $size-base * 2.6 !default;
@@ -74,7 +75,7 @@ $line-height-pre: 1.2 !default;
 
 $font-weight-bold: 600 !default;
 
-$font-family: inherit !default;
+$font-family: Menlo !default;
 
 $font-family-monospace:
   Menlo,
@@ -114,7 +115,7 @@ $smde-height-toolbar-fullscreen: $smde-width-toolbar-icon + ($width-gap * 2) !de
 $smde-margin-hidden-scrollbar: 32px !default;
 
 // This is hard coded in simplemde/src/js/simplemde.js
-// Be careful if you want to change it 
+// Be careful if you want to change it
 $smde-breakpoint-mobile: $width-breakpoint !default;
 
 // z-index

@@ -9,30 +9,26 @@ jshint = require('gulp-jshint'),
 autoprefixer = require('gulp-autoprefixer'),
 rimraf = require('gulp-rimraf'),
 symdest = require('gulp-symdest'),
-electron = require('gulp-atom-electron'),
 sass = require('gulp-sass'),
-electron2 = require('electron-connect').server.create();
+electron = require('electron-connect').server.create();
+const shell = require('gulp-shell');
 
 var cssSources = [
-  'assets/scss/*.scss',
+  'assets/scss/**/*.scss',
 ];
-
-
 
 gulp.task('default', ['serve']);
 
 gulp.task('serve', function () {
 
   // Start browser process
-  electron2.start();
-
+  electron.start();
   // Watch scss
   gulp.watch(cssSources, ['css']);
   // Restart browser process
-  gulp.watch('main.js', electron2.restart);
-
+  gulp.watch('main.js', electron.restart);
   // Reload renderer process
-  gulp.watch(['index.js', 'renderer.js', 'index.html', 'assets/css/app.min.css'], electron2.reload);
+  gulp.watch(['index.js', 'renderer.js', 'index.html', 'assets/css/app.min.css'], electron.reload);
 });
 
 
@@ -48,12 +44,4 @@ gulp.task('css', function(){
   .pipe(livereload());
 })
 
-// gulp.task('run', ['build'], function() {
-//   return run('electron .').exec();
-// });
-
-gulp.task('build', function () {
-	return gulp.src('*')
-		.pipe(electron({ version: '1.7.9', platform: 'darwin' }))
-		.pipe(symdest('app'));
-});
+gulp.task('build', shell.task('npm run package-mac'))

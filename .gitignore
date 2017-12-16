@@ -1,5 +1,7 @@
 node_modules
-electron-quick-start/node_modules
+do-not-forget-me-app/node_modules
+do-not-forget-me-app/release-builds
 app
 
 do-not-forget-me-app/package-lock.json
+release-builds

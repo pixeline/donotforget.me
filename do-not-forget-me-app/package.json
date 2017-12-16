@@ -1,10 +1,14 @@
 {
   "name": "Do-Not-Forget-Me",
+  "productName": "Do Not Forget Me",
+  "CompanyName": "pixeline SPRL",
   "version": "1.0.0",
   "description": "A write pad for catching that thought before it flies away... In MarkDown.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . do-not-forget-me --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=\"pixeline SPRL\" --version-string.FileDescription=\"A write pad for catching that thought before it flies away... In MarkDown.\" --version-string.ProductName=\"Do Not Forget Me\"",
+    "package-linux": "electron-packager . do-not-forget-me --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -16,6 +20,7 @@
   "devDependencies": {
     "electron": "^1.7.9",
     "electron-connect": "^0.6.2",
+    "electron-packager": "^10.1.0",
     "gulp": "^3.9.1",
     "gulp-atom-electron": "^1.15.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -27,6 +32,7 @@
     "gulp-rimraf": "^0.2.1",
     "gulp-run": "^1.7.1",
     "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3",
     "gulp-symdest": "^1.1.0",
     "gulp-uglify": "^3.0.0",
     "jshint": "^2.9.5"
