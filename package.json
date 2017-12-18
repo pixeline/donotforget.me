@@ -6,8 +6,8 @@
   "description": "A write pad for catching that thought before it flies away... In MarkDown.",
   "main": "src/main.js",
   "scripts": {
-    "package-mac": "electron-packager \"src/.\" --overwrite --platform=darwin --arch=x64 --icon=src/assets/icons/mac/icon.icns --prune=true --out=release-builds",
-    "package-win": "electron-packager src/. do-not-forget-me --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=\"pixeline SPRL\" --version-string.FileDescription=\"A write pad for catching that thought before it flies away... In MarkDown.\" --version-string.ProductName=\"Do Not Forget Me\"",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager \"src/.\" do-not-forget-me --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=\"pixeline SPRL\" --version-string.FileDescription=\"A write pad for catching that thought before it flies away... In MarkDown.\" --version-string.ProductName=\"Do Not Forget Me\"",
     "package-linux": "electron-packager \"src/.\" do-not-forget-me --overwrite --asar=true --platform=linux --arch=x64 --icon=src/assets/icons/png/1024x1024.png --prune=true --out=release-builds"
   },
   "repository": "https://github.com/electron/electron-quick-start",
