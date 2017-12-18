@@ -1,4 +1,6 @@
-
+::selection {
+background:transparent;
+}
 @import "simplemde-theme-dnfm";
 
 $chrome-icons-color: #CCC;
@@ -9,6 +11,7 @@ $title-font: 'Barlow Semi Condensed', sans-serif;;
 html,body{
   margin:0;
   padding:0;
+  background: #FFFFFF;
 }
 
 // Window title bar
@@ -44,7 +47,6 @@ html,body{
 body.theme-default{
   overflow:hidden;
   position:relative;
-  background: white;
 }
 .editor-toolbar{
   position:fixed;
@@ -92,9 +94,11 @@ body.theme-default{
   left:0;
   width:99%;
   z-index:2;
+  border-top-color:white;
   border-bottom-color:white;
   transition: all .4s linear;
   height:calc(100vh - 140px);
+  padding-top:0;
   &.closed{
     border-top-color:white;
     top:10px;

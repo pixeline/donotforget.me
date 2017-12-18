@@ -31,10 +31,11 @@ function createWindow () {
     width: width,
     minHeight: 600,
     height: height,
-    frame: false,
+    //frame: false,
     center: true,
     title: 'Do Not Forget Me',
     titleBarStyle: 'hidden',
+    titlebarAppearsTransparent: 'YES',
     icon: path.join(__dirname, 'assets/icons/png/64x64.png')
   })
 
