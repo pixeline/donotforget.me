@@ -16,7 +16,7 @@ runSequence = require('run-sequence');
 const shell = require('gulp-shell');
 
 var cssSources = [
-  'assets/scss/**/*.scss',
+  'src/assets/scss/**/*.scss',
 ];
 
 gulp.task('default', ['serve']);
@@ -28,9 +28,9 @@ gulp.task('serve', function () {
   // Watch scss
   gulp.watch(cssSources, ['css']);
   // Restart browser process
-  gulp.watch('main.js', electron.restart);
+  gulp.watch('src/main.js', electron.restart);
   // Reload renderer process
-  gulp.watch(['index.js', 'renderer.js', 'index.html', 'assets/css/app.min.css'], electron.reload);
+  gulp.watch(['src/index.js', 'src/renderer.js', 'src/index.html', 'src/assets/css/app.min.css'], electron.reload);
 });
 
 
@@ -39,10 +39,10 @@ gulp.task('css', function(){
   .pipe(sass().on('error', sass.logError))
   .pipe(concat('app.css'))
   //.pipe(autoprefixer({browsers: ['last 2 versions', 'ie 10']}))
-  .pipe(gulp.dest('assets/css'))
+  .pipe(gulp.dest('src/assets/css'))
   .pipe(rename({suffix: '.min'}))
   .pipe(minifycss())
-  .pipe(gulp.dest('assets/css'))
+  .pipe(gulp.dest('src/assets/css'))
   .pipe(livereload());
 })
 
