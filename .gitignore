@@ -1,7 +1,6 @@
 node_modules
-do-not-forget-me-app/node_modules
-do-not-forget-me-app/release-builds
+src/node_modules
+release-builds
 app
-
-do-not-forget-me-app/package-lock.json
+src/package-lock.json
 release-builds
