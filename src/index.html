@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <title>Do not forget me!</title>
   <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/simplemde.min.css">
-  <link rel="stylesheet" href="./node_modules/highlight.js/styles/github.css">
+  <link rel="stylesheet" href="../node_modules/simplemde/dist/simplemde.min.css">
+  <link rel="stylesheet" href="../node_modules/highlight.js/styles/github.css">
   <link rel="stylesheet" href="assets/css/app.min.css">
 </head>
 <body class="theme-default">
@@ -16,10 +15,11 @@
 
   <textarea id="content" ></textarea>
 
-  <script src="./assets/js/highlight.js"></script>
-  <script src="./assets/js/simplemde.min.js"></script>
+  <!-- <script src="./assets/js/highlight.js"></script> -->
+  <script src="../node_modules/simplemde/dist/simplemde.min.js"></script>
   <script>
   // You can also require other files to run in this process
+  require('highlight.js')
   require('./renderer.js')
   </script>
   <script>require('electron-connect').client.create()</script>
