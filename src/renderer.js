@@ -19,6 +19,7 @@ let simplemde = new SimpleMDE({
   //promptURLs: true,
   renderingConfig: {
     codeSyntaxHighlighting: true,
+    singleLineBreaks: true
   },
   toolbar : ["bold","italic","heading","|","link","image","code","unordered-list","ordered-list","quote","horizontal-rule","table","|","preview", "side-by-side", "guide"],
   shortcuts: {
