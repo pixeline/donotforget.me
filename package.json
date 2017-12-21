@@ -2,7 +2,7 @@
   "name": "Do-Not-Forget-Me",
   "productName": "Do Not Forget Me",
   "CompanyName": "pixeline SPRL",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A write pad for catching that thought before it flies away... In MarkDown.",
   "main": "src/main.js",
   "scripts": {
@@ -10,9 +10,13 @@
     "package-win": "electron-packager . do-not-forget-me --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=\"pixeline SPRL\" --version-string.FileDescription=\"A write pad for catching that thought before it flies away... In MarkDown.\" --version-string.ProductName=\"Do Not Forget Me\"",
     "package-linux": "electron-packager . do-not-forget-me --overwrite --asar=true --platform=linux --arch=x64 --icon=src/assets/icons/png/512x512.png --prune=true --out=release-builds",
     "package-dmg": "electron-installer-dmg \"release-builds/Do Not Forget Me-darwin-x64/Do Not Forget Me.app\" DoNotForgetMe --out=release-builds --overwrite --icon=src/assets/icons/mac/icon.icns",
-    "create-installer-win": "node src/installers/windows/createinstaller.js"
+    "create-installer-win": "node src/installers/windows/createinstaller.js",
+    "create-debian-installer": "electron-installer-debian --src release-builds/do-not-forget-me-linux-x64/ --arch amd64 --config debian.json"
   },
-  "repository": "https://github.com/pixeline/donotforget.me",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pixeline/donotforgetme.git"
+  },
   "keywords": [
     "Electron",
     "markdown"
@@ -28,11 +32,15 @@
     "gulp": "^3.9.1",
     "gulp-atom-electron": "^1.15.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-bump": "^2.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-github-release": "^1.2.1",
     "gulp-jshint": "^2.0.4",
     "gulp-livereload": "^3.8.1",
     "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-prompt": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.1",
     "gulp-run": "^1.7.1",
