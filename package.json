@@ -2,7 +2,7 @@
   "name": "Do-Not-Forget-Me",
   "productName": "Do Not Forget Me",
   "CompanyName": "pixeline SPRL",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A write pad for catching that thought before it flies away... In MarkDown.",
   "main": "src/main.js",
   "scripts": {
