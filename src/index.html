@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Do not forget me!</title>
-<script>
-require('highlight.js')
-</script>
-  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-  <link rel="stylesheet" href="../node_modules/simplemde/dist/simplemde.min.css">
-  <link rel="stylesheet" href="assets/css/app.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/latest/styles/github.min.css">
 
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/editor.md/editormd.min.js"></script>
+  <script>if (window.module) module = window.module;</script>
+
+  <link rel="stylesheet" href="../node_modules/editor.md/css/editormd.min.css">
+  <link rel="stylesheet" href="assets/css/app.min.css">
 </head>
 <body class="theme-default">
   <header id="title-bar">
-        <div id="title">Do not forget me.</div>
-   </header>
+    <div id="title">Do not forget me.</div>
+  </header>
+  <div id="editormd">
+    <textarea id="content" style="display:none;"></textarea>
+  </div>
 
-  <textarea id="content" ></textarea>
-
-  <!-- <script src="./assets/js/highlight.js"></script> -->
-  <script src="../node_modules/simplemde/dist/simplemde.min.js"></script>
   <script>
   // You can also require other files to run in this process
   require('./renderer.js')
