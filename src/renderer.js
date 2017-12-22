@@ -10,20 +10,36 @@ let $ = require('jquery');
 
 const remote = require('electron').remote;
 let store = remote.getGlobal('store');
+var editor;
+
 
 $(function() {
-        var editor = editormd("editormd", {
-            path : "../node_modules/editor.md/lib/" // Autoload modules mode, codemirror, marked... dependents libs path
-        });
 
-        /*
-        // or
-        var editor = editormd({
-            id   : "editormd",
-            path : "../lib/"
-        });
-        */
-    });
+  // Inject saved content on load.
+  $('#content').html( store.get('content') );
+
+  // Instantiate the md editor...
+
+  editor = editormd("editormd", {
+    path : "../node_modules/editor.md/lib/",
+    saveHTMLToTextarea : true,
+    autoHeight : true,
+    emoji: true,
+    taskList : true,
+    htmlDecode : true,
+     theme : "default",
+    editorTheme : editormd.editorThemes['base16-light'],
+    onchange : function() {
+      store.set('content', this.getMarkdown());
+      // ....
+    }
+
+  });
+  // // STORE DATA IN FILE SYSTEM
+  // editor.codemirror.on("change", function(){
+  //   store.set('content', editor.getMarkdown());
+  // });
+});
 //
 // let simplemde = new SimpleMDE({
 //   autofocus: true,

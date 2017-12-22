@@ -1,6 +1,6 @@
 @import "../../../node_modules/normalize.css/normalize.css";
 //@import "simplemde-theme-dnfm";
-@import "../../../node_modules/highlight.js/styles/github.css";
+
 ::selection {
 background:transparent;
 }
@@ -91,48 +91,46 @@ body.theme-default{
     transform: rotate(180deg);
   }
 }
-
-.CodeMirror{
-  position:fixed;
-  top:75px;
-  left:0;
-  width:99%;
-  z-index:2;
-  border-top-color:white;
-  border-bottom-color:white;
-  transition: all .4s linear;
-  height:calc(100vh - 140px);
-  padding-top:0;
-  &.closed{
-    border-top-color:white;
-    top:10px;
-    height:calc(100vh - 65px);
-  }
-}
-
-.CodeMirror-cursor {
-  border-left: 2px solid #20BBFC;
-  border-right: none;
-  width: 0;
-}
-.editor-statusbar{
-  position:fixed;
-  z-index:11;
-  width:100%;
-  bottom:0;
-  text-align:center;
-  opacity:.5;
-  //font-family: $title-font;
-  //letter-spacing:1px;
-  text-transform: lowercase;
-  transition: all .4s linear;
-  height:25px;
-  line-height:25px;
-  font-size:12px;
-  &:hover{
-    opacity:1;
-    transition: all .4s linear;
-  }
-
-
-}
+//
+// .CodeMirror{
+//   position:fixed;
+//   top:75px;
+//   left:0;
+//   width:99%;
+//   z-index:2;
+//   border-top-color:white;
+//   border-bottom-color:white;
+//   transition: all .4s linear;
+//   height:calc(100vh - 140px);
+//   padding-top:0;
+//   &.closed{
+//     border-top-color:white;
+//     top:10px;
+//     height:calc(100vh - 65px);
+//   }
+// }
+//
+// .CodeMirror-cursor {
+//   border-left: 2px solid #20BBFC;
+//   border-right: none;
+//   width: 0;
+// }
+// .editor-statusbar{
+//   position:fixed;
+//   z-index:11;
+//   width:100%;
+//   bottom:0;
+//   text-align:center;
+//   opacity:.5;
+//   //font-family: $title-font;
+//   //letter-spacing:1px;
+//   text-transform: lowercase;
+//   transition: all .4s linear;
+//   height:25px;
+//   line-height:25px;
+//   font-size:12px;
+//   &:hover{
+//     opacity:1;
+//     transition: all .4s linear;
+//   }
+// }
